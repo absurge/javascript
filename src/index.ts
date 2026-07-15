@@ -12,18 +12,18 @@ export type EvaluateResult = {
     >;
 };
 
-export type ABSurgeOptions = {
+export type ABsurgeOptions = {
     publishableKey: string;
     baseUrl?: string;
     environment?: string;
 };
 
-export class ABSurge {
+export class ABsurge {
     private publishableKey: string;
     private baseUrl: string;
     private environment: string;
 
-    constructor(options: ABSurgeOptions) {
+    constructor(options: ABsurgeOptions) {
         this.publishableKey = options.publishableKey;
         this.baseUrl = options.baseUrl ?? '/api/v1';
         this.environment = options.environment ?? 'production';
@@ -39,7 +39,7 @@ export class ABSurge {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-ABSurge-Key': this.publishableKey,
+                'X-ABsurge-Key': this.publishableKey,
             },
             body: JSON.stringify({
                 environment: this.environment,
@@ -51,7 +51,7 @@ export class ABSurge {
         });
 
         if (!response.ok) {
-            throw new Error(`ABSurge evaluate failed: ${response.status}`);
+            throw new Error(`ABsurge evaluate failed: ${response.status}`);
         }
 
         return response.json();
@@ -134,7 +134,7 @@ export class ABSurge {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-ABSurge-Key': this.publishableKey,
+                'X-ABsurge-Key': this.publishableKey,
             },
             body: JSON.stringify({
                 environment: this.environment,
@@ -143,7 +143,7 @@ export class ABSurge {
         });
 
         if (!response.ok) {
-            throw new Error(`ABSurge track failed: ${response.status}`);
+            throw new Error(`ABsurge track failed: ${response.status}`);
         }
 
         const data = await response.json();

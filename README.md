@@ -1,6 +1,6 @@
 # @absurge/sdk
 
-JavaScript SDK for [ABSurge](https://absurge.com) — feature flags and A/B testing.
+JavaScript SDK for [ABsurge](https://absurge.com) — feature flags and A/B testing.
 
 ## Install
 
@@ -13,9 +13,9 @@ pnpm add @absurge/sdk
 ## Usage
 
 ```ts
-import { ABSurge } from '@absurge/sdk';
+import { ABsurge } from '@absurge/sdk';
 
-const absurge = new ABSurge({
+const absurge = new ABsurge({
   publishableKey: 'pk_...',
   baseUrl: 'https://your-app.example/api/v1', // optional, default: '/api/v1'
   environment: 'production', // optional
@@ -46,7 +46,7 @@ await absurge.trackConversion('pricing-test', 'user-123', 'purchase', 49.0);
 | `trackConversion(experiment, distinctId, event, value?, properties?)` | Record conversion |
 | `trackReplay(experiment, distinctId, events, durationMs?, format?)` | Upload session replay events |
 
-Authenticate with your environment publishable key via the `X-ABSurge-Key` header (set automatically).
+Authenticate with your environment publishable key via the `X-ABsurge-Key` header (set automatically).
 
 ## License
 

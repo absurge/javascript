@@ -1,7 +1,7 @@
 {
     "name": "@absurge/sdk",
-    "version": "0.1.0",
-    "description": "ABSurge JavaScript SDK for feature flags and A/B testing",
+    "version": "0.2.0",
+    "description": "ABsurge JavaScript SDK for feature flags and A/B testing",
     "type": "module",
     "main": "src/index.ts",
     "types": "src/index.ts",
